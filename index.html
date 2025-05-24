@@ -14,11 +14,10 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-    <div class="game-container bg-white p-8 rounded-lg shadow-xl flex flex-col items-center max-w-2xl w-full">
-        <h1 class="text-4xl font-bold text-gray-800 mb-6">BASTA!</h1>
-            <br> </br>
-        <div class="circle-container relative w-80 h-80 md:w-96 md:h-96 mb-8">
+<body class=" flex items-center justify-center min-h-screen p-4">
+    <div class="game-container bg-white p-8 rounded-lg flex flex-col items-center max-w-2xl w-full">
+         <br> </br>
+        <div class="circle-container relative">
             </div>
             <br> </br>
         <div id="timerDisplay" class="text-6xl font-extrabold text-blue-600 mb-8">00:00</div>
@@ -29,15 +28,15 @@
             </button>
 
             <div class="time-settings bg-gray-50 p-6 rounded-lg shadow-inner w-full max-w-sm">
-    <h2 class="text-xl font-semibold text-gray-700 mb-4">Configuración de Tiempo</h2>
+    <h2 class=" font-semibold text-gray-700 mb-4">Configuración de Tiempo</h2>
     <div class="flex flex-row space-x-4">
         <div class="flex-1">
-            <label for="minTime" class="block text-gray-600 text-sm font-medium mb-1">Tiempo Min:</label>
-            <input type="text" id="minTime" value="00:30" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-center text-lg font-mono" placeholder="MM:SS">
+            <label for="minTime" class="block text-gray-600 text-sm font-small mb-1">Tiempo Min:</label>
+            <input type="text" id="minTime" value="00:30" class="w-full p-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-center text-lg font-mono" placeholder="MM:SS">
         </div>
         <div class="flex-1">
-            <label for="maxTime" class="block text-gray-600 text-sm font-medium mb-1">Tiempo Max:</label>
-            <input type="text" id="maxTime" value="04:00" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-center text-lg font-mono" placeholder="MM:SS">
+            <label for="maxTime" class="block text-gray-600 text-sm font-small mb-1">Tiempo Max:</label>
+            <input type="text" id="maxTime" value="04:00" class="w-full p-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-center text-lg font-mono" placeholder="MM:SS">
         </div>
     </div>
 </div>
@@ -46,10 +45,10 @@
     </div>
 
     <audio id="temporizadorAudio" loop>
-        <source src="https://www.soundjay.com/misc/sounds/tick-tock-1.mp3" type="audio/mpeg">
+        <source src="https://cdn.freesound.org/previews/435/435690_3813226-lq.mp3" type="audio/mpeg">
     </audio>
     <audio id="alarmaAudio">
-        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-01.mp3" type="audio/mpeg">
+        <source src="https://cdn.freesound.org/previews/185/185479_71257-lq.mp3" type="audio/mpeg">
     </audio>
 
     <script src="app.js"></script>

@@ -1,31 +1,33 @@
 /* Estilos generales para el contenedor del juego */
 .game-container {
-    min-width: 320px; /* Ancho mínimo para móviles */
-    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    flex-grow: 1;
     width: 95%; /* Ocupa la mayoría del ancho disponible */
     box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
 }
 
 /* Contenedor para los botones de las letras */
 .circle-container {
+    width: min(90vw, 90vh);
+    height: min(90vw, 90vh);
     position: relative;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem; /* Espacio debajo del círculo */
+    aspect-ratio: 1 / 1;
 }
 
 /* Estilos para los botones de las letras */
 .letter-button {
     position: absolute;
-    width: 50px; /* Tamaño de los botones */
-    height: 50px;
+    width: 70px; /* Tamaño de los botones */
+    height: 70px;
     border-radius: 50%;
     background-color: white;
     color: #374151; /* Texto gris oscuro */
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,42 +60,7 @@
     font-family: 'Inter', monospace; /* Fuente monoespaciada para los tiempos */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .circle-container {
-        width: 280px;
-        height: 280px;
-    }
-    .letter-button {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-    .game-container {
-        padding: 1.5rem;
-    }
-    #timerDisplay {
-        font-size: 4rem;
-    }
-}
 
-@media (max-width: 480px) {
-    .circle-container {
-        width: 240px;
-        height: 240px;
-    }
-    .letter-button {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-    .game-container {
-        padding: 1rem;
-    }
-    #timerDisplay {
-        font-size: 3.5rem;
-    }
-}
 #timerDisplay{
     display: none;
 }
