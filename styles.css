@@ -1,0 +1,102 @@
+/* Estilos generales para el contenedor del juego */
+.game-container {
+    min-width: 320px; /* Ancho mínimo para móviles */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    width: 95%; /* Ocupa la mayoría del ancho disponible */
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+}
+
+/* Contenedor para los botones de las letras */
+.circle-container {
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem; /* Espacio debajo del círculo */
+}
+
+/* Estilos para los botones de las letras */
+.letter-button {
+    position: absolute;
+    width: 50px; /* Tamaño de los botones */
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: #374151; /* Texto gris oscuro */
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #d1d5db; /* Borde gris */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.letter-button:hover:not(:disabled) {
+    transform: scale(1.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.letter-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+}
+
+/* Estilo para el botón cuando está activo (verde) */
+.letter-button.active {
+    background-color: #22c55e; /* Verde de Tailwind (green-500) */
+    color: white;
+    border-color: #16a34a; /* Verde más oscuro */
+}
+
+/* Estilos para el input de tiempo */
+.time-settings input[type="text"] {
+    font-family: 'Inter', monospace; /* Fuente monoespaciada para los tiempos */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .circle-container {
+        width: 280px;
+        height: 280px;
+    }
+    .letter-button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    .game-container {
+        padding: 1.5rem;
+    }
+    #timerDisplay {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .circle-container {
+        width: 240px;
+        height: 240px;
+    }
+    .letter-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .game-container {
+        padding: 1rem;
+    }
+    #timerDisplay {
+        font-size: 3.5rem;
+    }
+}
+#timerDisplay{
+    display: none;
+}
+*{
+    text-align: center;
+}
